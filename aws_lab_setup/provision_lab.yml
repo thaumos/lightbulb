@@ -12,10 +12,7 @@
 
 - name: Create user accounts
   hosts: lab_hosts
-  gather_facts: no
   become: yes
-  vars:
-    ansible_user: ec2-user
   roles:
     - role: user_accounts
       tags:
